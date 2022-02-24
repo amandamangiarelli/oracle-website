@@ -1,0 +1,665 @@
+/** Custom Fonts **/
+
+@font-face {
+    font-family: 'cantata_oneregular';
+    src: url('cantataone-regular-webfont.woff2') format('woff2'),
+         url('cantataone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'varela_roundregular';
+    src: url('varelaround-regular-webfont.woff2') format('woff2'),
+         url('varelaround-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** start menu stuff **/
+
+#centeredmenu {
+	clear: both;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'varela_roundregular', sans-serif;
+	font-size: 130%;
+	text-shadow: 2px 2px 2px #b3b3b3;
+	z-index: 1000;
+	position: relative;
+}
+
+#centeredmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	position: relative;
+	right: 50%;
+}
+
+#centeredmenu ul li {
+	margin: 0 0 0 1px;
+	padding: 0;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+#centeredmenu ul li a {
+	display: block;
+	margin: 0;
+	padding: .6em 2em .4em;
+	font-size: 1em;
+	line-height: 1em;
+	background: #ECECEC;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	border-radius: 0px 0px 8px 8px;
+}
+
+#centeredmenu ul li.active a {
+	color: #fff;
+	background: #000;
+}
+
+#centeredmenu ul li a:hover {
+	background: #ECECEC;
+	color: #000;
+	border-bottom:1px solid transparent;
+}
+
+#centeredmenu ul li:hover a,
+#centeredmenu ul li.hover a {
+	background: #ECECEC;
+	color: #000;
+	border-bottom:1px solid transparent;
+}
+
+/** Submenu items **/
+#centeredmenu ul ul {
+	display: none;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	right: auto;
+	width: 10em;
+}
+
+#centeredmenu ul ul li {
+	left: auto;
+	margin: 0;
+	clear: left;
+	width: 100%;
+}
+
+#centeredmenu ul ul li a,
+#centeredmenu ul li.active li a,
+#centeredmenu ul li:hover ul li a,
+#centeredmenu ul li.hover ul li a {
+	font-size:.8em;
+	font-weight: normal;
+	background: #ECECEC;
+	color: #000;
+	line-height:1.4em;
+	border-bottom:1px solid #ddd;
+	border-radius: 0px;
+}
+#centeredmenu ul ul li a:hover,
+#centeredmenu ul li.active ul li a:hover,
+#centeredmenu ul li:hover ul li a:hover,
+#centeredmenu ul li.hover ul li a:hover {
+	background: #d4d4d4;
+	color: #000;
+}
+
+#centeredmenu ul ul.last {
+	left: auto;
+	right: 0;
+}
+
+#centeredmenu ul li:hover ul,
+#centeredmenu ul li.hover ul {
+	display: block;
+}
+
+/**end menu stuff**/
+
+/** basic layout stuff**/
+
+.div1,
+.div2 {
+	overflow: auto;
+}
+
+.div1,
+.div2 p, h1 {
+	margin: 20px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+	
+
+#logo {
+	height: auto; 
+    width: auto; 
+    max-width: 300px; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	background-color: #ECECEC;
+	padding: 10px;
+}
+
+.right {
+	float: right;
+	clear: both;
+	margin-left:20px;
+}
+
+.left {
+	float: left;
+	clear: both;
+	margin-right:20px;
+}
+
+i {
+	margin-right: 5px;
+}
+
+p, a {
+	font-family: 'varela_roundregular', sans-serif;
+}
+
+.main2 a {
+	color: #000;
+	text-shadow: 2px 2px 2px #b3b3b3;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+    flex: 1;
+	justify-content: center
+}
+
+.main1 {
+	flex: 1;
+	padding: 10px;
+	height: 400px;
+}
+
+
+h1 {
+	font-family: 'cantata_oneregular', serif;
+	padding: 10px 10px 10px 0px;
+}
+
+h2 {
+	font-family: 'cantata_oneregular', serif;
+	font-size: 1em;
+}
+
+h3 {
+	font-family: 'cantata_oneregular', serif;
+	font-size: 0.8em;
+	padding: 0px;
+	line-height: 20%;
+	font-style: italic;
+}
+
+ol {
+   list-style: none;
+   counter-reset: item;
+   font-family: 'varela_roundregular', sans-serif;
+	font-size: 1.1em;
+	line-height: 2em;
+}
+ol li {
+   counter-increment: item;
+   margin-bottom: 5px;
+}
+ol li:before {
+   margin-right: 10px;
+   content: counter(item);
+   background: #A97455;
+   border-radius: 20%;
+   color: white;
+   width: 1.6em;
+   text-align: center;
+   display: inline-block;
+}
+
+.qahr {
+	width: 20%;
+	margin-left: 0;
+}
+
+/** buttons **/
+
+.button {
+	background-color: #A97455;
+	border: 1px solid #000;
+	border-radius: 5px;
+	color: #fff;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	text-shadow: 2px 2px 2px #474747;
+	margin-top: 10px;
+}
+
+.learnbutton {
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	color: #fff;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-family: 'varela_roundregular', sans-serif;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px #b3b3b3;
+}
+
+/** tables and stuff **/
+
+table, th, td {
+	border: 1px solid #000;
+	border-collapse: collapse;
+	width: 45%;
+}
+
+table {
+	border-radius:6px;
+	margin-bottom: 10px;
+	box-shadow: 5px 5px 5px #C0C0C0;
+}
+
+th {
+	color: #fff;
+	background-color: #A97455;
+	font-family: 'cantata_oneregular', sans-serif;
+	font-size: 25px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	border: none;
+	padding: 20px 10px 20px 10px;
+}
+
+.tableleft {
+	text-align: left;
+}
+
+.tableright {
+	text-align: right;
+}
+
+td {
+	font-family: 'varela_roundregular', sans-serif;
+	border: none;
+	padding: 20px 10px 20px 10px;
+}
+
+.rating {
+	padding: 0px;
+	margin: 0px;
+}
+
+.main3 {
+	width: 70%;
+	padding: 20px 50px 20px 50px;
+	margin: auto;
+}
+
+/** main2 on homepage **/
+
+.main2 {
+	background-color: #fff;
+	padding: 20px 50px 20px 50px;
+}
+
+/** footer **/
+
+footer {
+	font-family: 'varela_roundregular', sans-serif;
+	color: #fff;
+	background-color: #181409;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer a:visited {
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+footer ul {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 5px;
+}
+
+footer li {
+	margin: 10px 10px 10px 0px;
+}
+
+footer hr {
+	color: #fff;
+	width: 40%;
+	margin: 3 auto;
+	margin-left: 0;
+}
+
+.ft-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-main-item {
+    padding: 1.25rem;
+    min-width: 25%;
+}
+
+.ft-copytext {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ft-copytext li {
+    margin: 0.125rem 1rem;
+    white-space: nowrap;
+}
+
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+}
+
+/** end footer **/
+
+/** video on home page **/
+#video{
+	display: none
+}
+
+#videosubstitute {
+	display: block;
+	width: auto;
+	height: 100%;
+}
+
+#fullScreenDiv{
+    background-color: #fff;
+    position: relative;
+}
+
+#video{    
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #video{
+	background: rgba(0, 0, 0, 0.6);
+  }
+  #videosubstitute{
+    display: block;
+    width: 100%;
+    height: auto;}
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    width: 100%;
+    left: -100%;
+  }
+  #videosubstitute {
+	display: block;
+	width: auto;
+	height: 100%;
+	}
+}
+/** if there is 992  pixels or more, then display the video but hide the image **/
+@media only screen and (min-width : 992px) {
+	#video {
+		display: block;
+	}
+	#videosubstitute {
+		display: none
+	}
+}   
+
+/* text over video */
+#indexText{
+    position: absolute;  
+	top: 0;  
+	left: 0;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+}
+
+#videoTitle {
+	font-family: 'cantata_oneregular', serif;
+	color: #fff;
+	text-shadow: 2px 2px 2px #b3b3b3;
+}
+
+/** slideshow gallery **/
+
+* {
+	box-sizing: border-box;
+}
+
+/** Position the image container (needed to position the left and right arrows) **/
+.galleryContainer {
+	position: relative;
+	width: 70%;
+}
+
+/** Hide the images by default **/
+.mySlides {
+	display: none;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+/** Add a pointer when hovering over the thumbnail images **/
+.cursor {
+	cursor: pointer;
+}
+
+/** Position the "next button" to the right **/
+.next {
+	float: right;
+}
+
+.prev {
+	float: left;
+}
+
+.next,
+.prev {
+	color: #fff;
+}
+
+/** Number text (1/3 etc) **/
+.numbertext {
+	color: #000;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	font-family: 'varela_roundregular', sans-serif;
+}
+
+/** Container for image text **/
+.caption-container {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: #fff;
+	font-weight: bold;
+	font-family: 'varela_roundregular', sans-serif;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/** Six columns side by side **/
+.column {
+	float: left;
+	width: 16.66%;
+}
+
+/** Add a transparency effect for thumnbail images **/
+.demo {
+	opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}
+
+/** end slideshow gallery **/
+
+/** product specs table **/
+
+.specs th {
+	color: #fff;
+	text-align: left;
+	background-color: #A97455;
+	font-family: 'cantata_oneregular', sans-serif;
+	font-size: 18px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	border: none;
+	padding: 20px 10px 20px 10px;
+}
+
+.specs tr {
+	border: 1px solid #000;
+}
+
+.specs{
+	width: 80%;
+	display: none;
+}
+/** end product specs table **/
+
+/** parts page layout **/
+#parts {
+	display: none;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.flex-container > div {
+	background-color: #F7F6F4;
+	width: 250px;
+	margin: 10px;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: 6px 5px 5px darkgrey;
+}
+
+.flex-container > div > img {
+	margin-top: 12px;
+	width: 90%;
+}
+
+.flex-container > div > h1 {
+	font-size: 1.5em;
+	line-height: 0;
+}
+
+.flex-container > div > h2 {
+	font-size: 1em;
+	line-height: 1em;
+	padding: 0px 10px;
+}
+
+/** end parts page **/
+
+/** tablets **/
+@media only screen and (max-width: 768px) {
+	.main3 {
+		width: 90%;
+	}
+	ol, li {
+		padding: 0px;
+	}
+	#videosubstitute {
+	display: block;
+	width: auto;
+	height: auto;
+	}
+}
+
+/** phones **/
+
+@media only screen and (max-width: 480px) {
+	.main3 {
+		width: 100%;
+	}
+	#centeredmenu {
+		font-size: 100%;
+	}
+	.specs {
+		width: 100%;
+	}
+	ol, li {
+		padding: 0px;
+	}
+	#videosubstitute {
+	display: block;
+	width: auto;
+	height: auto;
+	}
+	
+}
